@@ -4,21 +4,21 @@ $errorMSG = "";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+    $errorMSG = "Nome é requerido ";
 } else {
     $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+    $errorMSG .= "E-mail é requerido ";
 } else {
     $email = $_POST["email"];
 }
 
 // MSG Guest
 if (empty($_POST["guest"])) {
-    $errorMSG .= "Subject is required ";
+    $errorMSG .= "Solicitante é requerido ";
 } else {
     $guest = $_POST["guest"];
 }
@@ -26,7 +26,7 @@ if (empty($_POST["guest"])) {
 
 // MSG Event
 if (empty($_POST["event"])) {
-    $errorMSG .= "Subject is required ";
+    $errorMSG .= "Evento é requerido ";
 } else {
     $event = $_POST["event"];
 }
@@ -34,14 +34,14 @@ if (empty($_POST["event"])) {
 
 // MESSAGE
 if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Mensagem é requerido ";
 } else {
     $message = $_POST["message"];
 }
 
 
-$EmailTo = "armanmia7@gmail.com";
-$Subject = "New Message Received";
+$EmailTo = "papainoel.me@gmail.com";
+$Subject = "Nova mensagem recebida!";
 
 // prepare email body text
 $Body = "";
@@ -69,7 +69,7 @@ if ($success && $errorMSG == ""){
    echo "success";
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo "Algo está errado :(";
     } else {
         echo $errorMSG;
     }
